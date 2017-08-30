@@ -54,6 +54,10 @@ group :development do
   gem 'spring'
 end
 
+group :development do
+  gem 'letter_opener_web'
+end
+
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'

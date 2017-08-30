@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for your purchase from to Jungle.com</h1>
+    <p> Your purchase total came to: $<%= @order.total_cents / 100 %>
+    <p> See below for your order details</p>
+    <br>
+    <ul>
+    <% @order.line_items.each do |line_item| %>
+      <li><%= line_item.product.name %></li>
+      <li> <%= line_item.product.description %></li>
+      <li> Quantity: <%= line_item.quantity %></li>
+      <li>Total: $<%= line_item.total_price_cents / 100 %></li>
+    <% end %>
+  </ul>
+    <p>Thanks  and have a great day!</p>
+  </body>
+</html>
