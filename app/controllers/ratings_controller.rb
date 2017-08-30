@@ -1,4 +1,6 @@
 class RatingsController < ApplicationController
+before_filter :authorize
+
   def create
     @product = Product.find(params[:product_id])
     @rating = @product.ratings.create(rating_params)
@@ -6,6 +8,14 @@ class RatingsController < ApplicationController
     @rating.save
     redirect_to product_path(@product)
   end
+
+  def destroy
+    @product = Product.find(params[:product_id])
+    @rating = @product.ratings.find(params[:id])
+    @rating.destroy
+    redirect_to product_path(@product)
+  end
+
 
   private
   def rating_params

@@ -25,14 +25,19 @@
         </dl>
         <dl class="dl-horizontal">
         <dt>Reviews </dt>
-        <dd><% @product.ratings.each do |rating| %>
-          <div class = "rating">'<%= rating.description %>' - <span class="name"><%= rating.user.name %></span></div>
-        <% end %></dd>
+        <dd><% @product.ratings.reverse.each do |rating| %>
+            <div class = "rating">'<%= rating.description %>' - <span class="name"><%= rating.user.name %></span></div>
+           <% if current_user.id == rating.user_id %>
+            <%= link_to 'Delete', [rating.product, rating],
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+          <% end %>
+          <% end %></dd>
       </dl>
       </div>
     </div>
   </article>
-
+<% if current_user %>
   <article>
   <h2> Add a review</h2>
   <%= form_for([@product, @product.ratings.build]) do |f| %>
@@ -43,5 +48,6 @@
     <%= f.submit %>
   <% end %>
   </article>
+<% end %>
 
 </section>
