@@ -4,7 +4,9 @@
     <h1>My Cart</h1>
   </header>
 
+  
   <div class="panel panel-default items">
+  <% if cart.present? %>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -48,6 +50,9 @@
         </script>
       <% end %>
     </div>
+    <% else %>
+    <p> Whoops! It looks like your cart is empty. Add more items to your cart <%= link_to 'here', products_path %> </p>
+    <% end %>
   </div>
 
 </section>
