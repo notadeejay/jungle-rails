@@ -22,16 +22,26 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
-
         </dl>
         <dl class="dl-horizontal">
         <dt>Reviews </dt>
         <dd><% @product.ratings.each do |rating| %>
-          <div class = "rating"><%= rating.description %> - <%= rating.user.name %></div>
+          <div class = "rating">'<%= rating.description %>' - <span class="name"><%= rating.user.name %></span></div>
         <% end %></dd>
       </dl>
       </div>
     </div>
+  </article>
+
+  <article>
+  <h2> Add a review</h2>
+  <%= form_for([@product, @product.ratings.build]) do |f| %>
+    <%= f.label :Rating %> <br />
+    <%= f.select :rating, [[1], [2], [3], [4], [5]]%> <br />
+    <%= f.label :Review %> <br />
+     <%= f.text_field :description %><br />
+    <%= f.submit %>
+  <% end %>
   </article>
 
 </section>
