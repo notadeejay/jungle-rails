@@ -15,11 +15,13 @@
     </button>
     </span>
   <% end %>
-
+<% if current_user %>
   <% if current_user.id == rating.user_id %>
   <span class="delete"><%= link_to 'Delete', [rating.product, rating],
   method: :delete,
   data: { confirm: 'Are you sure?' } %></span>
+<% end %>
+
 <% end %>
 </div>
 <% end %></dd></dt>
