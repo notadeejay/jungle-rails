@@ -4,6 +4,10 @@ class Admin::CategoriesController < ApplicationController
   def new
     @category = Category.new
   end
+   
+ def index
+  @category = Category.all 
+ end
 
   def create
     @category = Category.new(category_params)
