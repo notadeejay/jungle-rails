@@ -51,7 +51,9 @@
       <% end %>
     </div>
     <% else %>
-    <p> Whoops! It looks like your cart is empty. Add more items to your cart <%= link_to 'here', products_path %> </p>
+    <div class="empty-cart"> 
+    <img src="https://cdn0.iconfinder.com/data/icons/shopcons/48/Basket-Cart-close-512.png">
+    <span> Whoops! It looks like your cart is empty. Add more items to your cart <%= link_to 'here', products_path %> </span></div>
     <% end %>
   </div>
 

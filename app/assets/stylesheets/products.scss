@@ -60,7 +60,8 @@ main section.categories-show {
         border-top-left-radius: 4px;
         border-bottom-right-radius: 20px;
         font-size: 0.8em;
-        color: #eee
+        color: #eee;
+        font-family:  'Work Sans', sans-serif;
       }
 
       &:hover {
@@ -81,8 +82,122 @@ main section.products-show {
   .product-detail {
     img.main-img {
       max-width: 100%;
+      border: 1px solid black;
     }
   }
 }
 
+dt.title {
+  font-family: 'Work Sans', sans-serif;
+}
 
+dd {
+  margin: 5px;
+}
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+div.rating {
+  margin: 0 12px 12px 12px;
+  border: 1px dotted #000000;
+  padding: 8px;
+  background: #FBF5F3;
+}
+
+span.delete {
+  float: right;
+}
+
+span.review {
+  font-style: italic;
+}
+
+span.name {
+  font-family: 'Work Sans', sans-serif;
+}
+
+div.add-review {
+  width: 100%;
+  padding: 8px;
+  border-top: 2px solid grey;
+  margin-top: 16px;
+}
+
+.add-review h2 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+input#rating_description{
+  width: 500px;
+  height: 150px
+}
+
+label {
+  margin: 4px;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  border-radius: 2px;
+  font-family: 'Work Sans', sans-serif;
+  background: #CFD11A;
+  border: 1px solid black;
+}
+
+div.empty-cart {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.empty-cart img {
+  max-height: 100px;
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+table {
+  border: 1px solid #595959; 
+  padding: 8px;
+}
+.product p {
+  display: inline;
+}
+.product img {
+  max-height: 70%;
+  max-width: 70%;
+  float: left;
+}
+
+tbody {
+  background: white;
+}
+
+th {
+  padding: 10px;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #CFD11A;
+}
+td {
+  padding: 10px;
+  border: 1px dotted #595959; 
+}
+
+td.description {
+  max-width: 250px;
+}
+
+.total {
+  font-size: 30px;
+  float: right;
+  margin-top: 10px;
+}
+.orders-show h4 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #CFD11A;
+}

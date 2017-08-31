@@ -5,11 +5,11 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <ul>
+  <table style="width:100%">
     <%= render 'orders/lineitem' %>
-      <li>Grand Total: $<%= @order.total_cents / 100 %> </li>
-    </ul>
-    <h4>Thank you for your order <%= @current_user.email %> !</h4>
+  </table>
+      <span class="total">Grand Total: $<%= @order.total_cents / 100 %> </span>
+    <h4>Thank you for your order <%= @current_user.name %> !</h4>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
