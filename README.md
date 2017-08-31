@@ -8,7 +8,7 @@ An e-commerce Rails app built for learning Rails through example
 
 
 ## Getting started
-**Install add dependencies using npm install**
+**Install add dependencies using bundle install**
   
 
      bundle install
