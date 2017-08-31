@@ -9,7 +9,7 @@
     <%= render 'orders/lineitem' %>
   </table>
       <span class="total">Grand Total: $<%= @order.total_cents / 100 %> </span>
-    <h4>Thank you for your order <%= @current_user.name %> !</h4>
+    <h4>Thank you for your order <%= @current_user.email %> !</h4>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>

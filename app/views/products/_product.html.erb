@@ -4,10 +4,27 @@
       <%= image_tag product.image.thumb, alt: product.name %>
       <h4><%= product.name %></h4>
     <% end %>
+
   </header>
   <p class="description">
     <%= product.description %>
-  </p>
+  </p> 
+
+  <% @total_rating = 0 %>
+  <% @rating_count = 0 %>
+  
+  <% product.ratings.each do |review| %>
+   <% @total_rating += review.rating %>
+    <% @rating_count += 1%>
+   <% end %>
+    <br />
+    <br/ >
+   <% if @rating_count > 0 %>
+    <p class="small-rating">⭐ Rated <%= @total_rating / @rating_count %> / <%= @total_rating %> </p>
+   <% else %>
+    <p class="small-rating">Not yet reviewed</p>
+   <% end %>
+
   <footer class="actions">
     <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>
       <%= fa_icon "shopping-cart", text: 'Add' %>
