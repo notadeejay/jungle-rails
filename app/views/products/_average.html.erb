@@ -1,0 +1,12 @@
+<% @total_rating = 0 %>
+<% @rating_count = 0 %>
+
+<% @product.ratings.each do |review| %>
+ <% @total_rating += review.rating %>
+ <% @rating_count += 1%>
+ <% end %>
+
+ <span class="average-rating"><%= @total_rating / @rating_count %> out of <%= @rating_count %></span>
+ 
+ 
+

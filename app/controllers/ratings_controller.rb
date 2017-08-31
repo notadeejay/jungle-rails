@@ -16,7 +16,6 @@ before_filter :authorize
     redirect_to product_path(@product)
   end
 
-
   private
   def rating_params
     params.require(:rating).permit(:rating, :description)

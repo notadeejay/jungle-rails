@@ -1,8 +1,9 @@
 <section class="products-show">
 
   <header class="page-header">
-    <h1><%= link_to @product.category.name, @product.category %> &raquo; <%= @product.name %></h1>
-  </header>
+    <h1><%= link_to @product.category.name, @product.category %> &raquo; <%= @product.name %> </h1>
+    <h4>⭐ Rated <%= render 'products/average' %> by customers </h4>
+    </header>
 
   <article class="product-detail">
 
@@ -25,15 +26,7 @@
         </dl>
         <dl class="dl-horizontal">
         <dt class= "title">Reviews </dt>
-        <dd><% @product.ratings.reverse.each do |rating| %>
-            <div class = "rating">⭐ <span class="review">'<%= rating.description %>'</span> - <span class="name"><%= rating.user.name %></span>
-           <% if current_user.id == rating.user_id %>
-            <span class="delete"><%= link_to 'Delete', [rating.product, rating],
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %></span>
-          <% end %>
-          </div>
-          <% end %></dd>
+       <%= render 'products/review' %>
       </dl>
       </div>
     </div>

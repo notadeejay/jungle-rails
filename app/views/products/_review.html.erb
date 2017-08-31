@@ -1,0 +1,22 @@
+<dd><% @product.ratings.reverse.each do |rating| %>
+  <div class = "rating">📣
+  <span class="review">'<%= rating.description %>'</span> - 
+  <span class="name"><%= rating.user.name %></span>
+  <span class="average-rating"><%= @average %></span>
+
+
+  <span class="review-block-rate">
+  <% rating.rating.times do %>
+    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+    </button>
+    </span>
+  <% end %>
+
+  <% if current_user.id == rating.user_id %>
+  <span class="delete"><%= link_to 'Delete', [rating.product, rating],
+  method: :delete,
+  data: { confirm: 'Are you sure?' } %></span>
+<% end %>
+</div>
+<% end %></dd>
