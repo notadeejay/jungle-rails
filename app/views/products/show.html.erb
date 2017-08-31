@@ -2,7 +2,7 @@
 
   <header class="page-header">
     <h1><%= link_to @product.category.name, @product.category %> &raquo; <%= @product.name %> </h1>
-    <h4>⭐ Rated <%= render 'products/average' %> by customers </h4>
+    <h4> <%= render 'products/average' %> </h4>
     </header>
 
   <article class="product-detail">
@@ -25,7 +25,6 @@
           <dd><%= @product.price %></dd>
         </dl>
         <dl class="dl-horizontal">
-        <dt class= "title">Reviews </dt>
        <%= render 'products/review' %>
       </dl>
       </div>

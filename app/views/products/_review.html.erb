@@ -1,8 +1,11 @@
+
+<dt class= "title">Reviews </dt>
 <dd><% @product.ratings.reverse.each do |rating| %>
   <div class = "rating">📣
   <span class="review">'<%= rating.description %>'</span> - 
   <span class="name"><%= rating.user.name %></span>
   <span class="average-rating"><%= @average %></span>
+  <% @rating_count += 1 %>
 
 
   <span class="review-block-rate">
@@ -19,4 +22,4 @@
   data: { confirm: 'Are you sure?' } %></span>
 <% end %>
 </div>
-<% end %></dd>
+<% end %></dd></dt>

@@ -1,3 +1,5 @@
+
+
 <% @total_rating = 0 %>
 <% @rating_count = 0 %>
 
@@ -6,7 +8,8 @@
  <% @rating_count += 1%>
  <% end %>
 
- <span class="average-rating"><%= @total_rating / @rating_count %> out of <%= @rating_count %></span>
- 
- 
-
+ <% if @rating_count > 0 %>
+ <span class="average-rating">⭐ Rated <%= @total_rating / @rating_count %> out of <%= @total_rating %> by customers</span>
+ <% else %>
+ <span>Be the first to review this product</span>
+ <% end %>
