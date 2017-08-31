@@ -1,28 +1,24 @@
-# Jungle
+#Jungle Rails
+An e-commerce Rails app built for learning Rails through example 
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+##Final Product
+[![https://gyazo.com/ae6a6567ef78ff32e26c5c0c3f8dfcec](https://i.gyazo.com/ae6a6567ef78ff32e26c5c0c3f8dfcec.png)](https://gyazo.com/ae6a6567ef78ff32e26c5c0c3f8dfcec)
+
+[![https://gyazo.com/320918937fc53995923ab5b5fa7e5ed6](https://i.gyazo.com/320918937fc53995923ab5b5fa7e5ed6.png)](https://gyazo.com/320918937fc53995923ab5b5fa7e5ed6)
 
 
-## Setup
+##Getting started
+**Install add dependencies using npm install**
+  
 
-1. Fork & Clone
-2. Run `bundle install` to install dependencies
-3. Create `config/database.yml` by copying `config/database.example.yml`
-4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-5. Run `bin/rake db:reset` to create, load and seed db
-6. Create .env file based on .env.example
-7. Sign up for a Stripe account
-8. Put Stripe (test) keys into appropriate .env vars
-9. Run `bin/rails s -b 0.0.0.0` to start the server
+     bundle install
 
-## Stripe Testing
+  
+**Run the development web server using**
 
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+      bin/rails s -b 0.0.0.0
+  
 
-More information in their docs: <https://stripe.com/docs/testing#cards>
+**View the app at localhost:3000**
 
-## Dependencies
 
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe

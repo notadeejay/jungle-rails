@@ -17,8 +17,10 @@
    <% @total_rating += review.rating %>
     <% @rating_count += 1%>
    <% end %>
+
     <br />
     <br/ >
+
    <% if @rating_count > 0 %>
     <p class="small-rating">⭐ Rated <%= @total_rating / @rating_count %> / <%= @total_rating %> </p>
    <% else %>
@@ -35,7 +37,7 @@
   </footer>
     <% if product.quantity < 1 %>
       <aside class="soldout">
-      SOLD OUT!
+        SOLD OUT!
       </aside>
 
       <aside class="price">
