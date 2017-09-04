@@ -12,8 +12,8 @@ RSpec.describe User, type: :model do
       user = User.new(
         name: 'Amy',
         email: 'amy@gmail.com',
-        password: '1234',
-        password_confirmation: '123'
+        password: 'password',
+        password_confirmation: 'passwod'
       )
       expect(user.valid?).to be false
       expect(user.errors.full_messages).to include("Password confirmation doesn't match Password")
